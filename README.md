@@ -2,7 +2,7 @@
 Python framework for rest services that sits on top of web.py and uses content negotiation to delegate through to methods
 
 # Running
-An example of web.py service bootrap can be found at [example_service.py](restful/example_service.py)
+An example of web.py service bootrap can be found at [example_service.py](restful/test/example_service.py)
 
     $ python example_service.py
 
