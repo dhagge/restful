@@ -4,7 +4,7 @@ Sample launcher for restful web.py
 @author: dhagge
 '''
 import sys
-sys.path.insert(0, '../')
+sys.path.insert(0, '../') # just manipulate path to allow importing of service
 
 import web, service, uuid
 
@@ -14,10 +14,9 @@ def my_auth_handler(auth_header):
     return service.AuthValid if auth_header in valid_auth else service.AuthNotFound
 service.auth_handler = my_auth_handler
 
-''' provide custom audit handler (optional - only audit trail is needed) '''
+''' provide custom audit handler (optional - only if audit trail is needed) '''
 def my_audit_handler(path, http_method, http_payload, response):
-    # do whatever - i.e. log to DB
-    pass
+    pass # do whatever - i.e. log to DB
 service.audit_handler = my_audit_handler
 
 ''' provide custom session handler (optional - only needed if session management is required) '''
